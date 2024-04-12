@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian</title>
+    <link
+      id="pagestyle"
+      href="{{ url_for('static', filename= 'css/style.css')}}"
+      rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="container-close">&times;</div>
+        <img
+          src="{{ url_for('static', filename= 'img/fadli.jpeg')}}"
+          alt="image">
+        <div class="container-text">
+            <h2>Apa yang kamu pikirkan tentang orang ini?</h2>
+            <p>Berikan penilaian, kritik ataupun saran terbaikmu</p>
+            <form action="/submit" method="POST">
+                <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <span>*Form ini tidak akan merekam data pribadi kamu</span>
+        </div>
+      </div>
+</body>
+</html>
