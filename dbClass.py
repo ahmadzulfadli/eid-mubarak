@@ -7,9 +7,13 @@ app = Flask(__name__)
 
 # koneksi ke database
 
+
+app.config["SQLALCHEMY_DATABASE_URI"] = userpass + basedir + dbname
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
 db = SQLAlchemy(app)
 
-# tabel komposter
+# tabel Pesan
 class Pesan(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text, nullable=False)

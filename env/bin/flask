@@ -1,4 +1,4 @@
-#!/home/pr001/Data/server/penilaian_netizen/env/bin/python3
+#!/home/pr001/Data/server/eid-mubarak/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
